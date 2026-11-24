@@ -1,0 +1,6 @@
+{
+  "name": "VayuTrack — Smart Air Quality Monitoring & ML Alert System",
+  "description": "Smart Air Quality Monitoring and Alert System using Random Forest AQI prediction, Linear Regression health impact analytics, Python Flask ML backend, and Flutter Material 3 mobile app.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

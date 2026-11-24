@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Custom soft neomorphic & claymorphic utilities */
+.neo-raised-panel {
+  background: #fbf7dc;
+  box-shadow: 6px 7px 18px rgba(40, 54, 24, 0.08), -5px -5px 14px #ffffff, inset 1px 1px 1px rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(218, 214, 185, 0.6);
+}
+.neo-recessed-bay {
+  background: #f1ebd0;
+  box-shadow: inset 3px 3px 7px rgba(40, 54, 24, 0.11), inset -2px -2px 6px rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(206, 201, 172, 0.6);
+}
+.neo-recessed-groove {
+  background: #ece6cb;
+  box-shadow: inset 2px 2px 4px rgba(40, 54, 24, 0.16), inset -1px -1px 3px rgba(255, 255, 255, 0.85);
+}
+.neo-btn-raised {
+  background: #faf6dd;
+  box-shadow: 3px 3px 8px rgba(40, 54, 24, 0.09), -2px -2px 6px #ffffff, inset 1px 1px 1px rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(220, 216, 188, 0.7);
+}
+.neo-btn-pressed {
+  background: #283618;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.45), inset -1px -1px 3px rgba(255, 255, 255, 0.15), 0 2px 6px rgba(40, 54, 24, 0.15);
+  border: 1px solid #1c2710;
+}
+/* Tactile Clay Chips */
+.clay-chip-copper {
+  background: linear-gradient(145deg, #c7742b, #b36320);
+  box-shadow: 3px 4px 8px rgba(74, 42, 0, 0.28), inset 1px 1px 2px rgba(255, 255, 255, 0.35), inset -1px -2px 3px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.clay-chip-sunlit {
+  background: linear-gradient(145deg, #e4a968, #d49752);
+  box-shadow: 3px 4px 8px rgba(221, 161, 94, 0.32), inset 1px 1px 2px rgba(255, 255, 255, 0.5), inset -1px -2px 3px rgba(100, 50, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.clay-chip-olive {
+  background: linear-gradient(145deg, #6b793f, #576231);
+  box-shadow: 3px 4px 8px rgba(88, 99, 48, 0.3), inset 1px 1px 2px rgba(255, 255, 255, 0.32), inset -1px -2px 3px rgba(0, 0, 0, 0.22);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+.clay-chip-neutral {
+  background: linear-gradient(145deg, #f5f0d5, #e5e0c5);
+  box-shadow: 2px 3px 6px rgba(40, 54, 24, 0.08), inset 1px 1px 2px rgba(255, 255, 255, 0.9), inset -1px -1px 2px rgba(40, 54, 24, 0.1);
+  border-top: 1px solid #ffffff;
+}
+.bezel-ring {
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.9), inset 0 1px 2px rgba(40, 54, 24, 0.15);
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#4a2a00", "on-surface": "#1d1c0d", "tertiary-fixed": "#ffdcbb", "tertiary": "#2d1800", "outline": "#75786e", "surface-variant": "#e7e3ca", "surface-dim": "#dedbc2", "secondary": "#586330", "primary-container": "#283618", "on-primary-fixed": "#121f05", "primary-fixed-dim": "#bbcda3", "error": "#ba1a1a", "inverse-primary": "#bbcda3", "surface-tint": "#546341", "surface-container-highest": "#e7e3ca", "on-secondary-fixed-variant": "#404b1b", "on-primary-fixed-variant": "#3d4b2b", "surface-container-low": "#f8f4db", "on-secondary": "#ffffff", "secondary-fixed": "#dbe9a9", "inverse-surface": "#323120", "background": "#fefae0", "outline-variant": "#c5c8bc", "surface-container-high": "#ede9cf", "primary": "#142005", "on-primary-container": "#8fa078", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-fixed": "#d7e9bd", "on-background": "#1d1c0d", "secondary-container": "#d8e6a6", "on-error-container": "#93000a", "on-tertiary-container": "#c78e4d", "inverse-on-surface": "#f5f1d8", "surface-bright": "#fefae0", "secondary-fixed-dim": "#bfcd8f", "on-tertiary-fixed": "#2b1700", "error-container": "#ffdad6", "tertiary-fixed-dim": "#faba75", "on-surface-variant": "#45483f", "on-tertiary-fixed-variant": "#673d00", "surface": "#fefae0", "on-secondary-container": "#5c6834", "on-error": "#ffffff", "surface-container": "#f2efd5", "on-secondary-fixed": "#171e00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-xl": "2.25rem", "space-md": "1rem", "gutter-tablet": "1.25rem", "space-xs": "0.25rem", "margin": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-xxl": "3.5rem", "gutter": "1rem", "margin-tablet": "1.5rem" }, "fontFamily": { "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "metric-display": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "metric-display-mobile": ["Inter"], "body-lg": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-sm": ["Inter"] }, "fontSize": { "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "metric-display": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "metric-display-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed relative overflow-x-hidden"><div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary-container/25 blur-3xl"></div><div class="absolute top-1/3 -right-28 w-96 h-96 rounded-full bg-tertiary-fixed/20 blur-3xl"></div><div class="absolute bottom-24 -left-24 w-80 h-80 rounded-full bg-secondary-fixed/25 blur-3xl"></div></div><header class="fixed top-0 w-full z-50 bg-[#283618] pt-safe border-b border-[#3d4b2b] shadow-[0_4px_20px_rgba(40,54,24,0.35)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="VayuTrack Brand Logo" class="h-8 w-auto object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/ALJJyrAxYiC9IZ06xNXPXXHx6fuIdrb7bGAdusQlwafa9Qu1EL4lPUWsTF0XRrEM6w3KhgeNOVW0KDM_tm8bdnAQBNrLLITbwzquQ0CHFwP45Pal1jgV8TntPcmmV-ogsQs8h1v2lE_OTvvwTcbybxblB5XkjfqynLtsKW17nC-njDnQqjXsZCplrQ7lddXbBzS9QrUSmB79DdHbfxmi3rCMGvEzXk4O_pOWAwnkV0X5fLYU"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-[#fefae0] tracking-tight leading-none drop-shadow-xs">VayuTrack</span><span class="font-label-sm text-label-sm text-[#bbcda3] uppercase tracking-wider leading-none mt-0.5 font-medium">Trends And Heatmap</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-10 h-10 relative flex items-center justify-center rounded-xl text-surface bg-[#344520] border border-[#485e2c] shadow-[inset_1px_1px_1px_rgba(255,255,255,0.2),0_2px_6px_rgba(0,0,0,0.25)] hover:bg-[#3c5125] transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#dda15e] ring-2 ring-[#283618] animate-pulse"></span></button><div class="w-8 h-8 rounded-xl bg-[#142005] border border-[#3d4b2b] shadow-[inset_1px_1px_2px_rgba(0,0,0,0.5),0_1px_3px_rgba(255,255,255,0.1)] flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 min-h-screen z-10"><div class="flex flex-col w-full px-margin space-y-space-lg pb-space-xl">
+<!-- Screen Header & Subtitle -->
+<div class="flex flex-col space-y-space-xs pt-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg neo-btn-raised text-[#586330]">
+<span class="material-symbols-outlined text-[16px]">insights</span>
+</span>
+<span class="font-label-sm text-label-sm text-[#586330] uppercase tracking-wider font-semibold">Telemetry &amp; Diagnostic Lab</span>
+</div>
+<span class="font-label-sm text-label-sm neo-recessed-bay text-on-surface-variant px-2.5 py-1 rounded-full flex items-center gap-1.5 bezel-ring">
+<span class="w-1.5 h-1.5 rounded-full bg-[#dda15e] shadow-[0_0_6px_#dda15e] animate-ping"></span>
+        Live CPCB Feed
+      </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Pollution Analytics &amp; Trends</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Atmospheric dispersion, cross-pollutant dynamics, and multi-city comparative air parcels across the subcontinent.</p>
+</div>
+<!-- Segmented Timeframe Switcher (Tactile Physical Rocker Switches) -->
+<div class="w-full neo-recessed-bay p-1.5 rounded-2xl bezel-ring">
+<div class="grid grid-cols-4 gap-1.5 text-center font-label-md text-label-md">
+<button class="py-2.5 rounded-xl neo-btn-raised text-on-surface-variant active:translate-y-0.5 hover:text-primary transition-all duration-150 font-medium" type="button">24 Hours</button>
+<button class="py-2.5 rounded-xl neo-btn-pressed text-[#fefae0] font-semibold transition-all duration-150" type="button">7 Days</button>
+<button class="py-2.5 rounded-xl neo-btn-raised text-on-surface-variant active:translate-y-0.5 hover:text-primary transition-all duration-150 font-medium" type="button">30 Days</button>
+<button class="py-2.5 rounded-xl neo-btn-raised text-on-surface-variant active:translate-y-0.5 hover:text-primary transition-all duration-150 font-medium" type="button">Season</button>
+</div>
+</div>
+<!-- 7-Day AQI Trend Line Chart Card (Tactile Recessed Instrument Gauge) -->
+<div class="neo-raised-panel rounded-3xl p-space-md relative overflow-hidden space-y-space-sm">
+<!-- Physical Bezel Ridge top indicator -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#dda15e] via-[#bc6c25] to-[#586330] shadow-sm"></div>
+<div class="flex items-start justify-between mb-1 pt-1.5">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#586330] shadow-xs"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block font-semibold">7-Day Trajectory (Delhi Baseline)</span>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">AQI 248</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-lg clay-chip-sunlit text-[#283618] font-bold">Poor / High Risk</span>
+</div>
+</div>
+<div class="text-right neo-recessed-bay px-2.5 py-1 rounded-xl">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase tracking-wider">Weekly Peak</span>
+<span class="font-label-md text-label-md text-[#bc6c25] font-bold">290 AQI (Fri)</span>
+</div>
+</div>
+<!-- Threshold Pill Reference Strip -->
+<div class="flex items-center justify-between text-[10px] font-label-sm text-on-surface-variant pb-2 border-b border-[#dad6b9]">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary shadow-xs"></span>&lt;100 Good</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#dda15e] shadow-xs"></span>101-200 Mod</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#bc6c25] shadow-xs"></span>201-300 Poor</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error shadow-xs"></span>&gt;300 Severe</span>
+</div>
+<!-- Recessed Instrument Gauge Sensor Bay -->
+<div class="relative w-full h-56 mt-space-sm neo-recessed-bay rounded-2xl p-2.5">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 340 180">
+<defs>
+<lineargradient id="poorGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#BC6C25" stop-opacity="0.32"></stop>
+<stop offset="50%" stop-color="#DDA15E" stop-opacity="0.14"></stop>
+<stop offset="100%" stop-color="#FEFAE0" stop-opacity="0.0"></stop>
+</lineargradient>
+<filter height="200%" id="pathGlow" width="200%" x="-50%" y="-50%">
+<fegaussianblur result="blur" stddeviation="2.5"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<filter height="180%" id="shadowPoint" width="180%" x="-40%" y="-40%">
+<fedropshadow dx="0" dy="2.5" flood-color="#283618" flood-opacity="0.35" stddeviation="2"></fedropshadow>
+</filter>
+</defs>
+<!-- Threshold Horizontal Guides with debossed look -->
+<!-- Severe threshold: >300 (y = 20) -->
+<line opacity="0.45" stroke="#BA1A1A" stroke-dasharray="3 3" stroke-width="1" x1="20" x2="335" y1="20" y2="20"></line>
+<text fill="#BA1A1A" font-family="Inter" font-size="8" font-weight="600" text-anchor="end" x="335" y="16">300 Severe</text>
+<!-- Poor threshold limit: 201-300 (y = 65) -->
+<line opacity="0.75" stroke="#BC6C25" stroke-dasharray="4 2" stroke-width="1.2" x1="20" x2="335" y1="65" y2="65"></line>
+<text fill="#BC6C25" font-family="Inter" font-size="8" font-weight="600" text-anchor="end" x="335" y="61">200 CPCB Cap</text>
+<!-- Moderate threshold limit: 101-200 (y = 115) -->
+<line opacity="0.6" stroke="#DDA15E" stroke-dasharray="2 3" stroke-width="1" x1="20" x2="335" y1="115" y2="115"></line>
+<text fill="#DDA15E" font-family="Inter" font-size="8" font-weight="500" text-anchor="end" x="335" y="111">100 Satisfactory</text>
+<!-- Satisfactory baseline (y = 160) -->
+<line opacity="0.35" stroke="#606C38" stroke-width="0.8" x1="20" x2="335" y1="160" y2="160"></line>
+<!-- Area fill under line -->
+<polygon fill="url(#poorGradient)" points="30,77 80,60 130,29 180,39 230,15 280,46 330,39 330,165 30,165"></polygon>
+<!-- Secondary soft glow stroke under active path -->
+<polyline fill="none" opacity="0.25" points="30,77 80,60 130,29 180,39 230,15 280,46 330,39" stroke="#DDA15E" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></polyline>
+<!-- Active Trend Path (2.5px stroke) -->
+<polyline fill="none" filter="url(#pathGlow)" points="30,77 80,60 130,29 180,39 230,15 280,46 330,39" stroke="#283618" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></polyline>
+<!-- Data Points (Sunlit Clay with Forest border) -->
+<circle cx="30" cy="77" fill="#DDA15E" r="3.5" stroke="#283618" stroke-width="1.5"></circle>
+<circle cx="80" cy="60" fill="#DDA15E" r="3.5" stroke="#283618" stroke-width="1.5"></circle>
+<circle cx="130" cy="29" fill="#DDA15E" r="3.5" stroke="#283618" stroke-width="1.5"></circle>
+<!-- Active Highlight Point: Thursday AQI 248 with tactile ring -->
+<circle cx="180" cy="39" fill="#BC6C25" opacity="0.3" r="8"></circle>
+<circle cx="180" cy="39" fill="#DDA15E" filter="url(#shadowPoint)" r="4.5" stroke="#BC6C25" stroke-width="2"></circle>
+<circle cx="230" cy="15" fill="#BC6C25" r="4" stroke="#283618" stroke-width="1.5"></circle>
+<circle cx="280" cy="46" fill="#DDA15E" r="3.5" stroke="#283618" stroke-width="1.5"></circle>
+<circle cx="330" cy="39" fill="#DDA15E" r="4" stroke="#283618" stroke-width="1.5"></circle>
+<!-- Vertical Guide on Thu Active Point -->
+<line opacity="0.75" stroke="#BC6C25" stroke-dasharray="2 2" stroke-width="1.2" x1="180" x2="180" y1="39" y2="165"></line>
+<!-- X-Axis Labels -->
+<text fill="#75786E" font-family="Inter" font-size="9" text-anchor="middle" x="30" y="176">Mon</text>
+<text fill="#75786E" font-family="Inter" font-size="9" text-anchor="middle" x="80" y="176">Tue</text>
+<text fill="#75786E" font-family="Inter" font-size="9" text-anchor="middle" x="130" y="176">Wed</text>
+<text fill="#283618" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle" x="180" y="176">Thu</text>
+<text fill="#75786E" font-family="Inter" font-size="9" text-anchor="middle" x="230" y="176">Fri</text>
+<text fill="#75786E" font-family="Inter" font-size="9" text-anchor="middle" x="280" y="176">Sat</text>
+<text fill="#75786E" font-family="Inter" font-size="9" text-anchor="middle" x="330" y="176">Sun</text>
+</svg>
+<!-- Tooltip Physical Badge for Active Inspector (Tactile Bezel Plaque) -->
+<div class="absolute top-2 left-1/2 -translate-x-1/2 neo-btn-pressed text-[#fefae0] px-3.5 py-1.5 rounded-xl flex items-center space-x-2 pointer-events-none">
+<span class="w-2 h-2 rounded-full bg-[#dda15e] ring-2 ring-[#dda15e]/40 animate-pulse"></span>
+<div class="text-[11px] leading-tight">
+<span class="font-bold text-[#fefae0]">Thu 14:00</span> • AQI <strong class="text-[#dda15e] font-bold">248</strong> <span class="text-[#bbcda3]">(Peak PM2.5)</span>
+</div>
+</div>
+</div>
+<!-- Micro Diagnostic Instrument Gauge Footer -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm neo-recessed-bay px-3 py-2.5 rounded-xl">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#bc6c25]">cyclone</span>
+        Calm Winds (&lt;4 km/h) Trapping Particles
+      </span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Inversion Layer +180m</span>
+</div>
+</div>
+<!-- Multi-City Comparative Bar Card (Tactile Engraved Grooves) -->
+<div class="neo-raised-panel rounded-3xl p-space-md space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Inter-Metropolitan Benchmarking</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">City Air Parcel Comparison</h2>
+</div>
+<button aria-label="Regional filter" class="p-2 rounded-xl neo-btn-raised text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Comparative Metric Bars Set in Recessed Grooves -->
+<div class="space-y-space-md">
+<!-- Delhi NCR -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-md text-label-md text-primary font-semibold">Delhi NCR</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Anand Vihar)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +14%
+            </span>
+<span class="font-label-md text-label-md text-primary font-bold">248 AQI</span>
+</div>
+</div>
+<!-- Recessed Groove with Clay Fill -->
+<div class="h-3.5 w-full neo-recessed-groove rounded-full p-0.5 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#8f4510] via-[#bc6c25] to-[#dda15e] rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.3),inset_0_1px_1px_rgba(255,255,255,0.4)]" style="width: 82%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Primary: PM2.5 (182 µg/m³)</span>
+<span class="text-[#bc6c25] font-semibold">Unhealthy / Severe Risk</span>
+</div>
+</div>
+<!-- Mumbai (Bandra) -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-md text-label-md text-primary font-semibold">Mumbai</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(Bandra Kurla)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="font-label-sm text-label-sm text-[#bc6c25] font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_flat</span> +2%
+            </span>
+<span class="font-label-md text-label-md text-primary font-bold">142 AQI</span>
+</div>
+</div>
+<!-- Recessed Groove with Sunlit Clay fill -->
+<div class="h-3.5 w-full neo-recessed-groove rounded-full p-0.5 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#d49752] to-[#dda15e] rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2),inset_0_1px_1px_rgba(255,255,255,0.5)]" style="width: 47%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Primary: PM10 (114 µg/m³)</span>
+<span class="text-[#b36320] font-semibold">Moderate / Coastal Wash</span>
+</div>
+</div>
+<!-- Bengaluru (BTM) -->
+<div class="space-y-1.5">
+<div class="flex justify-between items-baseline">
+<div class="flex items-center space-x-1.5">
+<span class="font-label-md text-label-md text-primary font-semibold">Bengaluru</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(BTM Layout)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> -6%
+            </span>
+<span class="font-label-md text-label-md text-primary font-bold">68 AQI</span>
+</div>
+</div>
+<!-- Recessed Groove with Olive Leaf fill -->
+<div class="h-3.5 w-full neo-recessed-groove rounded-full p-0.5 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-[#606c38] to-[#80914c] rounded-full shadow-[0_1px_3px_rgba(0,0,0,0.2),inset_0_1px_1px_rgba(255,255,255,0.4)]" style="width: 22%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Primary: O&amp;sub3 (38 µg/m³)</span>
+<span class="text-[#586330] font-semibold">Satisfactory / Green Cover</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pollutant Correlation Heatmap Card (Tactile Raised Clay Chips / Matrix) -->
+<div class="neo-raised-panel rounded-3xl p-space-md space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block font-semibold">Atmospheric Interaction</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Pollutant Correlation Heatmap</h2>
+</div>
+<span class="inline-flex items-center justify-center p-2 neo-btn-raised rounded-xl text-secondary">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</span>
+</div>
+<!-- 4x4 Matrix Grid with tactile elevated clay chips -->
+<div class="neo-recessed-bay p-3 rounded-2xl overflow-x-auto">
+<div class="min-w-[280px]">
+<!-- Matrix Column Headers -->
+<div class="grid grid-cols-5 gap-2 text-center font-label-sm text-label-sm text-on-surface-variant mb-2">
+<span class="py-1"></span>
+<span class="py-1 font-bold text-primary">PM2.5</span>
+<span class="py-1 font-bold text-primary">PM10</span>
+<span class="py-1 font-bold text-primary">NO₂</span>
+<span class="py-1 font-bold text-primary">Wind/T</span>
+</div>
+<!-- Row 1: PM2.5 -->
+<div class="grid grid-cols-5 gap-2 items-center text-center font-label-sm text-label-sm mb-2">
+<span class="font-bold text-primary text-left text-[11px] truncate">PM2.5</span>
+<!-- PM2.5 x PM2.5 (1.00) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">1.00</div>
+<!-- PM2.5 x PM10 (0.94) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">0.94</div>
+<!-- PM2.5 x NO2 (0.85) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">0.85</div>
+<!-- PM2.5 x Wind (-0.60) -->
+<div class="clay-chip-olive text-[#fefae0] py-2.5 rounded-xl font-bold">-0.60</div>
+</div>
+<!-- Row 2: PM10 -->
+<div class="grid grid-cols-5 gap-2 items-center text-center font-label-sm text-label-sm mb-2">
+<span class="font-bold text-primary text-left text-[11px] truncate">PM10</span>
+<!-- PM10 x PM2.5 (0.94) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">0.94</div>
+<!-- PM10 x PM10 (1.00) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">1.00</div>
+<!-- PM10 x NO2 (0.68) -->
+<div class="clay-chip-sunlit text-[#283618] py-2.5 rounded-xl font-bold">0.68</div>
+<!-- PM10 x Wind (-0.48) -->
+<div class="clay-chip-olive text-[#fefae0] py-2.5 rounded-xl font-bold">-0.48</div>
+</div>
+<!-- Row 3: NO2 -->
+<div class="grid grid-cols-5 gap-2 items-center text-center font-label-sm text-label-sm mb-2">
+<span class="font-bold text-primary text-left text-[11px] truncate">NO₂</span>
+<!-- NO2 x PM2.5 (0.85) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">0.85</div>
+<!-- NO2 x PM10 (0.68) -->
+<div class="clay-chip-sunlit text-[#283618] py-2.5 rounded-xl font-bold">0.68</div>
+<!-- NO2 x NO2 (1.00) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">1.00</div>
+<!-- NO2 x Wind (-0.35) -->
+<div class="clay-chip-neutral text-on-surface-variant py-2.5 rounded-xl font-semibold">-0.35</div>
+</div>
+<!-- Row 4: Wind/Temp -->
+<div class="grid grid-cols-5 gap-2 items-center text-center font-label-sm text-label-sm">
+<span class="font-bold text-primary text-left text-[11px] truncate">Wind/T</span>
+<!-- Wind x PM2.5 (-0.60) -->
+<div class="clay-chip-olive text-[#fefae0] py-2.5 rounded-xl font-bold">-0.60</div>
+<!-- Wind x PM10 (-0.48) -->
+<div class="clay-chip-olive text-[#fefae0] py-2.5 rounded-xl font-bold">-0.48</div>
+<!-- Wind x NO2 (-0.35) -->
+<div class="clay-chip-neutral text-on-surface-variant py-2.5 rounded-xl font-semibold">-0.35</div>
+<!-- Wind x Wind (1.00) -->
+<div class="clay-chip-copper text-[#fefae0] py-2.5 rounded-xl font-bold">1.00</div>
+</div>
+</div>
+</div>
+<!-- Heatmap Shading Legend -->
+<div class="flex items-center justify-between pt-1 border-t border-[#dad6b9] text-[11px] font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-lg clay-chip-olive inline-block"></span>
+<span>Inverse (-0.60)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-lg clay-chip-sunlit inline-block"></span>
+<span>Moderate (0.45 - 0.70)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-lg clay-chip-copper inline-block"></span>
+<span>High (0.85 - 0.94)</span>
+</div>
+</div>
+<!-- Scientific Context Diagnostic Plaque -->
+<div class="neo-recessed-bay p-3.5 rounded-2xl flex items-start space-x-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">wb_twilight</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="text-primary font-semibold">Boundary Layer Trap Insight:</strong> Stagnant winter boundary layer trap increases PM2.5 &amp; NO₂ co-concentration. High thermal inversion suppresses vertical atmospheric dispersion across northern river basins.
+      </p>
+</div>
+</div>
+<!-- Regional Station Sensor Feed Carousel Placeholder (Dual Telemetry Sensors) -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Microclimate Telemetry Stations</span>
+<a class="font-label-sm text-label-sm text-[#bc6c25] hover:underline font-semibold" href="#">View 18 Stations</a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Sensor Tile 1 -->
+<div class="neo-raised-panel p-3.5 rounded-2xl flex flex-col justify-between space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ozone (O₃)</span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#586330] shadow-[0_0_6px_#586330]"></span>
+</div>
+<div class="flex items-baseline space-x-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">42.4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">µg/m³</span>
+</div>
+<div class="h-2 w-full neo-recessed-groove rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-[#586330] rounded-full shadow-xs" style="width: 35%;"></div>
+</div>
+</div>
+<!-- Sensor Tile 2 -->
+<div class="neo-raised-panel p-3.5 rounded-2xl flex flex-col justify-between space-y-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Carbon (CO)</span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#dda15e] shadow-[0_0_6px_#dda15e]"></span>
+</div>
+<div class="flex items-baseline space-x-1">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1.82</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">mg/m³</span>
+</div>
+<div class="h-2 w-full neo-recessed-groove rounded-full overflow-hidden p-0.5">
+<div class="h-full bg-[#dda15e] rounded-full shadow-xs" style="width: 62%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Export & Report Action Bar (Tactile Raised Heavy-Duty IoT Hardware Button) -->
+<div class="pt-space-xs">
+<button class="w-full py-4 px-4 rounded-2xl bg-[#283618] text-[#fefae0] font-label-md text-label-md flex items-center justify-center space-x-2.5 shadow-[5px_6px_16px_rgba(40,54,24,0.35),inset_1px_1px_2px_rgba(255,255,255,0.25)] border border-[#1b260f] active:shadow-[inset_2px_2px_6px_rgba(0,0,0,0.5)] active:translate-y-0.5 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[20px] text-[#dda15e]">download_for_offline</span>
+<span class="font-semibold tracking-wide">Download Comprehensive CPCB Air Quality Report (PDF)</span>
+</button>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#283618] border-t border-[#3d4b2b] shadow-[0_-4px_24px_rgba(40,54,24,0.3)]" data-active-classes="text-secondary-fixed font-semibold scale-105"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-primary-container hover:text-surface transition-all duration-200" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-primary-container hover:text-surface transition-all duration-200" data-path="ai-aqi-predictor" href="#"><span class="material-symbols-outlined text-[24px]">online_prediction</span><span class="font-label-sm text-label-sm mt-0.5">Predictor</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 transition-all duration-200 text-secondary-fixed font-semibold scale-105" data-path="trends-and-heatmap" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart_4_bars</span><span class="font-label-sm text-label-sm mt-0.5">Analytics</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-primary-container hover:text-surface transition-all duration-200" data-path="health-impact-and-research" href="#"><span class="material-symbols-outlined text-[24px]">vital_signs</span><span class="font-label-sm text-label-sm mt-0.5">Health</span></a></div></nav></body></html>

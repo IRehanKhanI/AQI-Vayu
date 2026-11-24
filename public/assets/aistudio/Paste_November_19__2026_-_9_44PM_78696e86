@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#4a2a00", "on-surface": "#1d1c0d", "tertiary-fixed": "#ffdcbb", "tertiary": "#2d1800", "outline": "#75786e", "surface-variant": "#e7e3ca", "surface-dim": "#dedbc2", "secondary": "#586330", "primary-container": "#283618", "on-primary-fixed": "#121f05", "primary-fixed-dim": "#bbcda3", "error": "#ba1a1a", "inverse-primary": "#bbcda3", "surface-tint": "#546341", "surface-container-highest": "#e7e3ca", "on-secondary-fixed-variant": "#404b1b", "on-primary-fixed-variant": "#3d4b2b", "surface-container-low": "#f8f4db", "on-secondary": "#ffffff", "secondary-fixed": "#dbe9a9", "inverse-surface": "#323120", "background": "#fefae0", "outline-variant": "#c5c8bc", "surface-container-high": "#ede9cf", "primary": "#142005", "on-primary-container": "#8fa078", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-fixed": "#d7e9bd", "on-background": "#1d1c0d", "secondary-container": "#d8e6a6", "on-error-container": "#93000a", "on-tertiary-container": "#c78e4d", "inverse-on-surface": "#f5f1d8", "surface-bright": "#fefae0", "secondary-fixed-dim": "#bfcd8f", "on-tertiary-fixed": "#2b1700", "error-container": "#ffdad6", "tertiary-fixed-dim": "#faba75", "on-surface-variant": "#45483f", "on-tertiary-fixed-variant": "#673d00", "surface": "#fefae0", "on-secondary-container": "#5c6834", "on-error": "#ffffff", "surface-container": "#f2efd5", "on-secondary-fixed": "#171e00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin-desktop": "2.5rem", "space-xl": "2.25rem", "space-md": "1rem", "gutter-tablet": "1.25rem", "space-xs": "0.25rem", "margin": "1rem", "space-lg": "1.5rem", "gutter-desktop": "1.5rem", "space-xxl": "3.5rem", "gutter": "1rem", "margin-tablet": "1.5rem" }, "fontFamily": { "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-sm": ["Inter"], "body-md": ["Inter"], "metric-display": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "metric-display-mobile": ["Inter"], "body-lg": ["Inter"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "label-sm": ["Inter"] }, "fontSize": { "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "label-md": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "metric-display": ["44px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "metric-display-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    /* Soft Neomorphic & Claymorphic Tactile Hardware Effects */
+    .neo-panel {
+      background: #f2efd5;
+      box-shadow: 7px 7px 18px rgba(40, 54, 24, 0.12), -7px -7px 18px rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .neo-inset {
+      background: #ede9cf;
+      box-shadow: inset 4px 4px 8px rgba(40, 54, 24, 0.12), inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+    }
+    .neo-pill {
+      box-shadow: 3px 3px 7px rgba(40, 54, 24, 0.11), -3px -3px 7px rgba(255, 255, 255, 0.85);
+    }
+    .neo-pill-inset {
+      box-shadow: inset 2px 2px 5px rgba(40, 54, 24, 0.12), inset -2px -2px 5px rgba(255, 255, 255, 0.85);
+    }
+    .clay-card {
+      background: #f2efd5;
+      box-shadow: 6px 7px 16px rgba(40, 54, 24, 0.13), -5px -5px 14px rgba(255, 255, 255, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.7);
+    }
+    .clay-card-dark {
+      background: #283618;
+      box-shadow: 8px 10px 22px rgba(20, 32, 5, 0.28), -4px -4px 14px rgba(255, 255, 255, 0.1), inset 1px 1px 2px rgba(255, 255, 255, 0.2);
+    }
+    .clay-card-terracotta {
+      background: #4a2a00;
+      box-shadow: 8px 10px 22px rgba(74, 42, 0, 0.32), -4px -4px 14px rgba(255, 255, 255, 0.12), inset 1px 1px 2px rgba(255, 255, 255, 0.25);
+    }
+    .clay-btn {
+      background: #FEFAE0;
+      box-shadow: 4px 5px 12px rgba(40, 54, 24, 0.18), -3px -3px 9px rgba(255, 255, 255, 0.95), inset 0 1px 2px #ffffff;
+      transition: all 0.15s ease-out;
+    }
+    .clay-btn:active {
+      box-shadow: inset 3px 3px 6px rgba(40, 54, 24, 0.22), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+      transform: translateY(1px);
+    }
+    .clay-btn-subtle {
+      box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25), -2px -2px 6px rgba(255, 255, 255, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      transition: all 0.15s ease-out;
+    }
+    .clay-btn-subtle:active {
+      box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.35);
+      transform: translateY(1px);
+    }
+  </style>
+</head><body class="bg-[#FEFAE0] font-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-fixed relative overflow-x-hidden"><div class="fixed inset-0 pointer-events-none overflow-hidden z-0"><div class="absolute -top-24 -left-20 w-80 h-80 rounded-full bg-[#DDA15E]/10 blur-3xl"></div><div class="absolute top-[28rem] -right-24 w-88 h-88 rounded-full bg-[#BC6C25]/08 blur-3xl"></div><div class="absolute bottom-40 -left-16 w-80 h-80 rounded-full bg-[#606C38]/10 blur-3xl"></div></div><header class="fixed top-0 w-full z-50 bg-[#283618] border-b border-white/10 pt-safe shadow-[0_6px_20px_rgba(20,32,5,0.28)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="VayuTrack Brand Logo" class="h-8 w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]" src="https://lh3.googleusercontent.com/aida/ALJJyrAxYiC9IZ06xNXPXXHx6fuIdrb7bGAdusQlwafa9Qu1EL4lPUWsTF0XRrEM6w3KhgeNOVW0KDM_tm8bdnAQBNrLLITbwzquQ0CHFwP45Pal1jgV8TntPcmmV-ogsQs8h1v2lE_OTvvwTcbybxblB5XkjfqynLtsKW17nC-njDnQqjXsZCplrQ7lddXbBzS9QrUSmB79DdHbfxmi3rCMGvEzXk4O_pOWAwnkV0X5fLYU"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface tracking-tight leading-none">VayuTrack</span><span class="font-label-sm text-label-sm text-[#DDA15E] uppercase tracking-wider leading-none mt-0.5 font-medium">Health Impact And Research</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="w-11 h-11 relative flex items-center justify-center rounded-full text-surface bg-[#1e2a12] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.35),inset_-2px_-2px_4px_rgba(255,255,255,0.08)] border border-white/10 active:scale-95 transition-all"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#DDA15E] ring-2 ring-[#283618] shadow-[0_0_6px_#DDA15E]"></span></button><div class="w-9 h-9 rounded-full bg-[#1e2a12] shadow-[inset_2px_2px_4px_rgba(0,0,0,0.4),inset_-2px_-2px_4px_rgba(255,255,255,0.08)] border border-white/15 flex items-center justify-center"><span class="material-symbols-outlined text-surface text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-transparent min-h-screen z-10"><div class="flex flex-col w-full px-margin space-y-space-lg">
+<!-- Screen Header & Scientific Attribution -->
+<div class="flex flex-col space-y-space-xs pt-space-sm">
+<div class="inline-flex items-center gap-1.5 self-start px-3.5 py-1.5 rounded-full bg-[#ede9cf] neo-pill text-[#606C38] border border-white/80">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">upload_file</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">ICMR &amp; WHO Cohort Benchmarks</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">PM2.5 Health &amp; Mortality Impact</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Epidemiological regression model tracking respiratory-cardiovascular burden across Indian urban clusters (2018–2024).</p>
+</div>
+<!-- Epidemiological Scatter Plot: Tactile Sensor Readout Console -->
+<div class="relative flex flex-col rounded-3xl p-space-md neo-panel overflow-hidden">
+<div class="relative flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#606C38] shadow-[inset_0_1px_1px_rgba(255,255,255,0.6)]"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#606C38] font-bold">Mortality Correlation Plot</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">Annual PM2.5 vs. Mortality Rate</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-[#ede9cf] neo-pill-inset text-primary font-label-sm text-label-sm font-bold border border-white/60">
+        p &lt; 0.001
+      </div>
+</div>
+<!-- Regression Formula Pill (Recessed Hardware Channel) -->
+<div class="relative flex items-center justify-between px-3.5 py-2.5 rounded-xl neo-inset mb-space-sm border border-[#283618]/10">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#BC6C25] shadow-[0_1px_3px_rgba(188,108,37,0.5)]"></span>
+<span class="font-label-sm text-label-sm text-primary font-medium">OLS Fit: <strong class="font-bold text-[#283618]">y = 0.74x + 42.1</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-[#283618] font-bold px-2.5 py-0.5 rounded-md bg-[#d8e6a6] neo-pill border border-white/60">R² = 0.887</span>
+</div>
+<!-- Debossed Sensor Screen Display Bezel -->
+<div class="relative w-full overflow-hidden rounded-2xl bg-[#FEFAE0] neo-inset p-2 border-2 border-[#dedbc2]">
+<svg class="w-full h-56 select-none" fill="none" viewbox="0 0 340 220" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="ciBand" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#BC6C25" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#BC6C25" stop-opacity="0.05"></stop>
+</lineargradient>
+<radialgradient cx="50%" cy="50%" id="pointGlow" r="50%">
+<stop offset="0%" stop-color="#BC6C25" stop-opacity="0.45"></stop>
+<stop offset="100%" stop-color="#BC6C25" stop-opacity="0"></stop>
+</radialgradient>
+<filter height="150%" id="clayShadow" width="150%" x="-25%" y="-25%">
+<fedropshadow dx="2" dy="3" flood-color="#283618" flood-opacity="0.22" stddeviation="2.5"></fedropshadow>
+</filter>
+</defs>
+<!-- Grid Lines & Background Bands -->
+<line stroke="#283618" stroke-dasharray="3 3" stroke-opacity="0.1" x1="38" x2="324" y1="30" y2="30"></line>
+<line stroke="#283618" stroke-dasharray="3 3" stroke-opacity="0.1" x1="38" x2="324" y1="75" y2="75"></line>
+<line stroke="#283618" stroke-dasharray="3 3" stroke-opacity="0.1" x1="38" x2="324" y1="120" y2="120"></line>
+<line stroke="#283618" stroke-dasharray="3 3" stroke-opacity="0.1" x1="38" x2="324" y1="165" y2="165"></line>
+<!-- Confidence Interval Range Band -->
+<polygon fill="url(#ciBand)" points="46,182 312,50 312,82 46,198"></polygon>
+<line stroke="#BC6C25" stroke-dasharray="3 2" stroke-opacity="0.45" stroke-width="1.3" x1="46" x2="312" y1="182" y2="50"></line>
+<line stroke="#BC6C25" stroke-dasharray="3 2" stroke-opacity="0.45" stroke-width="1.3" x1="46" x2="312" y1="198" y2="82"></line>
+<!-- Linear Regression Trendline (Copperwood) -->
+<line stroke="#BC6C25" stroke-linecap="round" stroke-width="2.8" x1="46" x2="312" y1="190" y2="66"></line>
+<!-- Scatter Points (Claymorphic Raised Nodes) -->
+<!-- Kochi (Low: 28 µg/m³, 62) -->
+<circle cx="78" cy="176" fill="#606C38" filter="url(#clayShadow)" r="5" stroke="#FEFAE0" stroke-width="1.5"></circle>
+<text fill="#586330" font-family="Inter" font-size="8.5" font-weight="700" x="85" y="179">Kochi</text>
+<!-- Bengaluru (Low-Mid: 44 µg/m³, 74) -->
+<circle cx="96" cy="166" fill="#606C38" filter="url(#clayShadow)" r="5" stroke="#FEFAE0" stroke-width="1.5"></circle>
+<text fill="#586330" font-family="Inter" font-size="8.5" font-weight="700" x="103" y="169">Bengaluru</text>
+<!-- Pune (Mid: 68 µg/m³, 94) -->
+<circle cx="124" cy="151" fill="#DDA15E" filter="url(#clayShadow)" r="5.5" stroke="#283618" stroke-width="1.2"></circle>
+<text fill="#283618" font-family="Inter" font-size="8.5" font-weight="600" x="131" y="154">Pune</text>
+<!-- Hyderabad (Mid: 78 µg/m³, 101) -->
+<circle cx="136" cy="144" fill="#DDA15E" filter="url(#clayShadow)" r="5.5" stroke="#283618" stroke-width="1.2"></circle>
+<text fill="#283618" font-family="Inter" font-size="8.5" font-weight="600" x="143" y="146">Hyderabad</text>
+<!-- Mumbai (Mid-High: 94 µg/m³, 114) -->
+<circle cx="156" cy="133" fill="#DDA15E" filter="url(#clayShadow)" r="5.5" stroke="#283618" stroke-width="1.2"></circle>
+<text fill="#283618" font-family="Inter" font-size="8.5" font-weight="600" x="163" y="136">Mumbai</text>
+<!-- Ludhiana (High: 132 µg/m³, 142) -->
+<circle cx="204" cy="111" fill="#BC6C25" filter="url(#clayShadow)" r="6" stroke="#FEFAE0" stroke-width="1.5"></circle>
+<text fill="#BC6C25" font-family="Inter" font-size="8.5" font-weight="700" x="211" y="113">Ludhiana</text>
+<!-- Kanpur (High: 154 µg/m³, 158) -->
+<circle cx="232" cy="98" fill="#BC6C25" filter="url(#clayShadow)" r="6" stroke="#FEFAE0" stroke-width="1.5"></circle>
+<text fill="#BC6C25" font-family="Inter" font-size="8.5" font-weight="700" x="239" y="100">Kanpur</text>
+<!-- Patna (Very High: 172 µg/m³, 169) -->
+<circle cx="254" cy="90" fill="#BC6C25" filter="url(#clayShadow)" r="6" stroke="#FEFAE0" stroke-width="1.5"></circle>
+<text fill="#BC6C25" font-family="Inter" font-size="8.5" font-weight="700" x="256" y="82">Patna</text>
+<!-- Delhi NCT Callout Target with Atmospheric Glow -->
+<circle cx="268" cy="80" fill="url(#pointGlow)" r="18"></circle>
+<circle cx="268" cy="80" fill="#BC6C25" filter="url(#clayShadow)" r="8" stroke="#FEFAE0" stroke-width="2.5"></circle>
+<circle class="animate-pulse" cx="268" cy="80" fill="none" r="12" stroke="#BC6C25" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<!-- Delhi NCT Callout Bezel Pill -->
+<g filter="url(#clayShadow)" transform="translate(148, 20)">
+<rect fill="#283618" height="36" rx="8" stroke="#DDA15E" stroke-opacity="0.4" stroke-width="1" width="168"></rect>
+<path d="M110 36 L114 43 L118 36 Z" fill="#283618"></path>
+<text fill="#DDA15E" font-family="Inter" font-size="8.5" font-weight="700" x="9" y="15">DELHI NCT: 182 µg/m³</text>
+<text fill="#FEFAE0" font-family="Inter" font-size="9" font-weight="600" x="9" y="28">176.8 excess deaths / 100k</text>
+</g>
+<!-- Axis Lines -->
+<line stroke="#283618" stroke-width="1.5" x1="38" x2="38" y1="20" y2="198"></line>
+<line stroke="#283618" stroke-width="1.5" x1="38" x2="328" y1="198" y2="198"></line>
+<!-- Y Axis Labels -->
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="end" x="32" y="34">220</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="end" x="32" y="79">160</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="end" x="32" y="124">100</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="end" x="32" y="169">50</text>
+<!-- X Axis Labels -->
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="38" y="210">0</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="96" y="210">50</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="160" y="210">100</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="224" y="210">150</text>
+<text fill="#75786e" font-family="Inter" font-size="8" font-weight="600" text-anchor="middle" x="288" y="210">200+</text>
+</svg>
+</div>
+<!-- Axis Descriptions -->
+<div class="relative flex items-center justify-between text-[#606C38] font-label-sm text-label-sm font-semibold mt-space-xs px-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+        Mortality / 100,000
+      </span>
+<span class="flex items-center gap-1">
+        Annual PM2.5 (µg/m³)
+        <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Epidemiologist Visual Metric Spotlights: Extruded Tactile Clay Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="relative overflow-hidden flex flex-col p-space-md rounded-2xl clay-card border border-white/70">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#606C38] font-bold">Cardio Relative Risk</span>
+<div class="w-6 h-6 rounded-full bg-[#d8e6a6] neo-pill flex items-center justify-center text-[#283618]">
+<span class="material-symbols-outlined text-[13px]">ecg_heart</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display-mobile text-metric-display-mobile text-primary tracking-tight font-bold drop-shadow-[0_1px_2px_rgba(40,54,24,0.15)]">1.34x</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-1 leading-snug">Per 25 µg/m³ elevation threshold</span>
+</div>
+<div class="relative overflow-hidden flex flex-col p-space-md rounded-2xl clay-card border border-white/70">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#BC6C25] font-bold">Years Lost (YLL)</span>
+<div class="w-6 h-6 rounded-full bg-[#faba75]/40 neo-pill flex items-center justify-center text-[#4a2a00]">
+<span class="material-symbols-outlined text-[13px]">hourglass_empty</span>
+</div>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display-mobile text-metric-display-mobile text-[#BC6C25] tracking-tight font-bold drop-shadow-[0_1px_2px_rgba(188,108,37,0.2)]">6.1 yrs</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium mt-1 leading-snug">Mean life expectancy penalty</span>
+</div>
+</div>
+<!-- Plain-Language Health Risk Summary Card: Tactile Black Forest Clay Instrument Console -->
+<div class="relative overflow-hidden flex flex-col clay-card-dark text-on-secondary rounded-3xl p-space-md border border-white/20 space-y-space-md">
+<div class="relative flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-2xl bg-[#1e2a12] shadow-[inset_2px_2px_5px_rgba(0,0,0,0.5),inset_-2px_-2px_4px_rgba(255,255,255,0.12)] border border-white/10 flex items-center justify-center text-[#DDA15E] shrink-0">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-surface leading-tight font-bold">Plain-Language Clinical Synthesis</h2>
+<span class="font-label-sm text-label-sm text-[#DDA15E] font-semibold">What these cohort findings mean for daily life</span>
+</div>
+</div>
+<!-- Takeaway 1: Debossed Hardware Sensor Strip -->
+<div class="relative flex flex-col p-space-sm rounded-2xl bg-[#1e2a12] shadow-[inset_3px_3px_7px_rgba(0,0,0,0.4),inset_-2px_-2px_5px_rgba(255,255,255,0.06)] border border-white/5">
+<div class="flex items-center gap-2 text-[#d8e6a6] font-label-md text-label-md font-semibold">
+<span class="w-6 h-6 rounded-lg bg-[#283618] neo-pill flex items-center justify-center text-[#d8e6a6]">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+</span>
+<span>Acute Exposure Penalty</span>
+</div>
+<p class="font-body-md text-body-md text-surface/95 mt-1.5 leading-snug">
+        Every <strong class="text-[#d8e6a6] font-bold">10 µg/m³ increase</strong> in chronic PM2.5 exposure correlates to a <strong class="text-[#d8e6a6] font-bold">7.4% rise</strong> in chronic respiratory emergency hospitalizations within 72 hours.
+      </p>
+</div>
+<!-- Takeaway 2: Debossed Hardware Sensor Strip -->
+<div class="relative flex flex-col p-space-sm rounded-2xl bg-[#1e2a12] shadow-[inset_3px_3px_7px_rgba(0,0,0,0.4),inset_-2px_-2px_5px_rgba(255,255,255,0.06)] border border-white/5">
+<div class="flex items-center gap-2 text-[#d8e6a6] font-label-md text-label-md font-semibold">
+<span class="w-6 h-6 rounded-lg bg-[#283618] neo-pill flex items-center justify-center text-[#d8e6a6]">
+<span class="material-symbols-outlined text-[15px]">hourglass_bottom</span>
+</span>
+<span>Years of Life Lost (YLL)</span>
+</div>
+<p class="font-body-md text-body-md text-surface/95 mt-1.5 leading-snug">
+        The average Delhi NCT resident faces an estimated <strong class="text-[#d8e6a6] font-bold">5.2 to 7.1 years</strong> reduction in lifespan without active continuous indoor HEPA mitigation and N95 masking.
+      </p>
+</div>
+<!-- Takeaway 3: Debossed Hardware Sensor Strip -->
+<div class="relative flex flex-col p-space-sm rounded-2xl bg-[#1e2a12] shadow-[inset_3px_3px_7px_rgba(0,0,0,0.4),inset_-2px_-2px_5px_rgba(255,255,255,0.06)] border border-white/5">
+<div class="flex items-center gap-2 text-[#d8e6a6] font-label-md text-label-md font-semibold">
+<span class="w-6 h-6 rounded-lg bg-[#283618] neo-pill flex items-center justify-center text-[#d8e6a6]">
+<span class="material-symbols-outlined text-[15px]">shield</span>
+</span>
+<span>Evidence-Based Protection</span>
+</div>
+<p class="font-body-md text-body-md text-surface/95 mt-1.5 leading-snug">
+        Seal bedroom zones with True-HEPA (CADR &gt; 350 m³/h). Reschedule outdoor cardiovascular exertion away from 05:00–09:00 AM surface temperature inversion peaks.
+      </p>
+</div>
+</div>
+<!-- Real-World Field Cohort Snapshot: Tactile Frame with Inset Media Bezel -->
+<div class="flex flex-col rounded-3xl overflow-hidden neo-panel p-2.5 border border-white/80">
+<div class="relative w-full h-36 rounded-2xl overflow-hidden shadow-[inset_0_2px_6px_rgba(0,0,0,0.25)] border border-[#283618]/15">
+<img class="w-full h-full object-cover" data-alt="Medical clinicians in New Delhi wearing protective particulate masks conducting field pulmonary spirometry lung tests on outdoor workers under a hazy morning sun, warm golden and terracotta lighting palette, documentary medical journalism style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR397dhVlF1VWrjmmVbe4wON7OfVwH0t-npG2NAYOwx1GPOAOLfAm1EocV9YEsI82s0bMHOLK8tJbjQtYe0aVROmAlYyaLX9-4_L3nAeSMoNCqp455EQY6pfwOqqVgYvmSI1dszxlldRCP5-sCi_6REDOFjaTgP7Tr56_7tHDV3B2qrtMjviOmaYZ9Isy0NpAYop1B6CuwfXcHOn66UqjBn3Ws1fy-tFLB9bvgiWVZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#283618]/90 via-[#283618]/30 to-transparent flex items-end p-space-sm">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-[#1e2a12]/80 border border-white/25 neo-pill">
+<span class="material-symbols-outlined text-[#DDA15E] text-[17px]">verified</span>
+<span class="font-label-sm text-label-sm text-[#FEFAE0] font-semibold">Multi-District Spirometry Screening Cohort (n = 42,800)</span>
+</div>
+</div>
+</div>
+<div class="px-space-xs pt-2.5 pb-0.5 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span>Standardized across age &amp; smoking status</span>
+<span class="font-bold text-[#283618] px-2.5 py-0.5 rounded-full bg-[#d8e6a6] neo-pill border border-white/70">ICMR Approved</span>
+</div>
+</div>
+<!-- Actionable Community Advisory & Pulmonary Emergency Strip (Tactile Sunlit Clay & Copperwood Hardware Module) -->
+<div class="relative overflow-hidden flex flex-col rounded-3xl clay-card-terracotta text-on-tertiary-container p-space-md border border-white/25 space-y-space-sm">
+<div class="relative flex items-start gap-space-sm">
+<div class="w-11 h-11 rounded-2xl bg-[#371f00] shadow-[inset_2px_2px_5px_rgba(0,0,0,0.5),inset_-2px_-2px_4px_rgba(255,255,255,0.15)] border border-white/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px] text-[#DDA15E] animate-pulse" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-[#DDA15E] font-bold">Priority Patient Advisory</span>
+<h3 class="font-headline-sm text-headline-sm text-[#FEFAE0] leading-snug font-bold">Pulmonary Emergency &amp; Bed Tracker</h3>
+<p class="font-body-sm text-body-sm text-[#FEFAE0]/90 mt-0.5 font-medium">
+          Real-time municipal dashboard locating nearest operational ICU beds equipped with invasive &amp; high-flow oxygen cannula.
+        </p>
+</div>
+</div>
+<!-- Action Buttons Group: Clay Extruded Actuators -->
+<div class="relative flex flex-col gap-space-xs pt-space-xs">
+<!-- Tactile Extruded Clay Primary CTA -->
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-2xl clay-btn text-[#4a2a00] font-headline-sm text-headline-sm font-bold border border-white/90" type="button">
+<span class="material-symbols-outlined text-[20px] text-[#BC6C25]" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+<span>Locate Oxygen Beds Nearby</span>
+</button>
+<!-- Secondary Tactile Hardware Bezel Button -->
+<button class="w-full h-11 flex items-center justify-center gap-2 rounded-2xl bg-[#371f00] clay-btn-subtle border border-white/15 text-[#FEFAE0] font-label-md text-label-md font-semibold" type="button">
+<span class="material-symbols-outlined text-[18px] text-[#DDA15E]">download_for_offline</span>
+<span>Download Full Epidemiological Factsheet (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Source Footer Note -->
+<div class="flex flex-col items-center justify-center text-center pb-space-md text-[#606C38] font-label-sm text-label-sm space-y-0.5 font-medium">
+<span>Data sources: Central Pollution Control Board (CPCB) &amp; National Burden Study</span>
+<span>Updated bi-weekly with satellite inversion recalibration.</span>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#283618] border-t border-white/10 shadow-[0_-6px_20px_rgba(20,32,5,0.28)]" data-active-classes="text-[#d8e6a6] font-bold scale-105"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-primary-container hover:text-surface transition-all duration-200" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-primary-container hover:text-surface transition-all duration-200" data-path="ai-aqi-predictor" href="#"><span class="material-symbols-outlined text-[24px]">online_prediction</span><span class="font-label-sm text-label-sm mt-0.5">Predictor</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 text-on-primary-container hover:text-surface transition-all duration-200" data-path="trends-and-heatmap" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart_4_bars</span><span class="font-label-sm text-label-sm mt-0.5">Analytics</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] px-2 py-1 transition-all duration-200 text-[#d8e6a6] font-bold scale-105" data-path="health-impact-and-research" href="#"><span class="material-symbols-outlined text-[24px] drop-shadow-[0_0_8px_rgba(216,230,166,0.5)]">vital_signs</span><span class="font-label-sm text-label-sm mt-0.5">Health</span></a></div></nav></body></html>
